@@ -13,16 +13,18 @@ div.div3{
 }
 
 input.in1{
-	padding:0.8em;
-	width: 20em;
+	padding:5px;
+	width: 15em;
+	margin-bottom:2px;
 	border-style: solid;
 	border-color: #EBECEC;
 	border-radius: 0.5em;
+	font-size: 15px;
 }	
 
 button.bt1{
-	padding:0.8em;
-	width: 18em;
+	padding:5px;
+	width: 15em;
 	color: #ffffff;
 	font-size: 1em;
 	background-color: #40D0EC;
@@ -35,6 +37,7 @@ button.bt1{
 p.p1{
 	font-family: sans-serif;
 	color:#40D0EC;
+	font-size: 12px;
 }
 
 h2.h2-1{
