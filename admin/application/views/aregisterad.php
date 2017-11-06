@@ -9,7 +9,9 @@
 					<span><u>New Account</u></span>						
 				</div>
 
-				<form method="post" action="customer.php">
+				<!-- <form method="post" action="customer.php"> -->
+				<?php echo validation_errors(); ?>
+				<?php echo form_open('Dashboard/registerAccount'); ?>
 					<table  class="form_table ">
 						<tr class="form_table_row">
 							<td class="form_table_row_description">Account Number</td>
@@ -114,7 +116,8 @@
 							</td>
 						</tr>
 					</table>
-				</form>
+				<!-- </form> -->
+				<?php echo form_close(); ?>
 				<!-- ......................................................................... -->
 			</div>
 		</span>	

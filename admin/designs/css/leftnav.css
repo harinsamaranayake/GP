@@ -9,18 +9,18 @@ div.navlist{
 ul.nav{
 	list-style-type: none;
 	margin:0px;
-	padding-top:0px;
+	padding:0px;
 }
 
 li.nav{
 	color: #808080;
-	padding: 5px 20px;
+	padding: 7px 20px;
 	font-size: 15px;
 }
 
 li.nav:hover{
 	color: #ffffff;
-	padding: 5px 20px;
+	padding: 7px 20px;
 	font-size: 15px;	
 	
 	background-color: #4B4B4B;
