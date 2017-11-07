@@ -4,3 +4,4 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>designs/css/leftnav.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>designs/css/topnav.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>designs/css/home.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>designs/css/login.css">
