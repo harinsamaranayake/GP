@@ -60,4 +60,27 @@ class Super_model extends CI_Model{
             return $query->result();
         }
     }
+
+    public function insertData($tablename, $data_arr) {
+        try {
+            $this->db->insert($tablename, $data_arr);
+            $ret = $this->db->insert_id() + 0;
+            return $ret;
+        } catch (Exception $err) {
+            return $err->getMessage();
+        }
+    }
+
+    public function deleteData($tblName,$where){
+      return $this->db->delete($tblName,$where);
+    }
+
+
+    public function updateData($tablename, $data_arr, $where_arr) {
+        try {
+            $this->db->update($tablename, $data_arr, $where_arr);           
+        } catch (Exception $err) {
+            return $err->getMessage();
+        }
+    }
 }

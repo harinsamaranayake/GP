@@ -38,7 +38,7 @@ class Super extends CI_Controller {
             		
 			$this->load->view('s_dashboard',$data);
 		}else{
-			$this->load->view('smap');
+			$this->load->view('s_superadmin');
 		}
 
 	}
@@ -46,5 +46,27 @@ class Super extends CI_Controller {
 	public function logout(){
 		session_unset();
 		redirect(base_url());
+	}
+
+	public function loadMap(){
+		$this->load->view('s_map');
+	}
+
+	public function addSuperAdmin(){
+		$superAdmin_array=array(
+			'id'=>$_POST('id'),
+			'nic'=>$_POST('nic'),
+			'telephone'=>$_POST('telephone'),
+			'mobile'=>$_POST('mobile'),
+			'email'=>$_POST('email'),
+			'password'=>$_POST('password'),
+			'pin'=>$_POST('pin'),
+			'resetCode'=>$_POST('resetCode'),
+			'createdBy'=>$_POST('createdBy'),
+		);
+
+		$result=$this->Super_model->insertData($tablename='superadmin',$superAdmin_array);
+
+		redirect('/Users');
 	}	
 }
