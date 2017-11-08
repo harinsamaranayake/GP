@@ -73,8 +73,7 @@ class Super_model extends CI_Model{
 
     public function deleteData($tblName,$where){
       return $this->db->delete($tblName,$where);
-    }
-
+    }    
 
     public function updateData($tablename, $data_arr, $where_arr) {
         try {

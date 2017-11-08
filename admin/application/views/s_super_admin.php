@@ -21,7 +21,7 @@
 
 		<!-- span 02 -->
 		<span style="width:55%;height:100%;background-color: #ffffff;display:inline-block;float: left;margin: 0px;border: 0px;padding: 0px;">
-			<form method="post" action="<?php echo base_url()?>index.php/Super.php/addSuperAdmin">
+			<form method="POST" action="<?php echo base_url()?>index.php/Super/addSuperAdmin">
 				<div class="topic">
 					<span><u>Super Admin Account</u></span>						
 				</div>
@@ -69,7 +69,7 @@
 					
 					<tr class="form_table_row">
 						<td class="form_table_row_description">Created By</td>
-						<td><input type="text" name="createdby" placeholder="created by" size="40" class="form_table_row_input" required=""></td>	
+						<td><input type="text" name="createdBy" placeholder="created by" size="40" class="form_table_row_input" required="" disabled ></td>	
 					</tr>
 
 					<tr class="form_table_row">

@@ -1,9 +1,9 @@
 .imghome{
-	width: 200px;
-	height: 200px;
+	width: 20%;
+	height: 20%;
 
 	margin:0px;
-	padding:20px;
+	padding:2%;
 	border-radius: 0px;	
 	border-radius: 0px;
 
@@ -15,4 +15,8 @@
 	background-color: #ffffff;
 	transition: 0.2s;
 	border:2px solid red;
+}
+
+a.white_link:hover{
+	background-color: #ffffff;
 }

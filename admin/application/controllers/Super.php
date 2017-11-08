@@ -38,7 +38,7 @@ class Super extends CI_Controller {
             		
 			$this->load->view('s_dashboard',$data);
 		}else{
-			$this->load->view('s_superadmin');
+			$this->load->view('s_home');
 		}
 
 	}
@@ -50,23 +50,61 @@ class Super extends CI_Controller {
 
 	public function loadMap(){
 		$this->load->view('s_map');
-	}
+	}	
 
 	public function addSuperAdmin(){
 		$superAdmin_array=array(
-			'id'=>$_POST('id'),
-			'nic'=>$_POST('nic'),
-			'telephone'=>$_POST('telephone'),
-			'mobile'=>$_POST('mobile'),
-			'email'=>$_POST('email'),
-			'password'=>$_POST('password'),
-			'pin'=>$_POST('pin'),
-			'resetCode'=>$_POST('resetCode'),
-			'createdBy'=>$_POST('createdBy'),
+			
+			'nic'=>$_POST['nic'],
+			'telephone'=>$_POST['telephone'],
+			'mobile'=>$_POST['mobile'],
+			'email'=>$_POST['email'],
+			'password'=>$_POST['password'],
+			'pin'=>$_POST['pin'],
+			'resetCode'=>$_POST['resetCode'],
+			'creator'=>$_POST['createdBy'],
 		);
 
 		$result=$this->Super_model->insertData($tablename='superadmin',$superAdmin_array);
 
-		redirect('/Users');
-	}	
+		redirect(base_url());
+	}
+
+	public function addAreaAdmin(){
+		$data_array=array(
+			
+			'nic'=>$_POST['nic'],
+			'firstname'=>$_POST['firstName'],
+			'middlename'=>$_POST['middleName'],
+			'lastname'=>$_POST['lastName'],
+			'telephone'=>$_POST['telephone'],
+			'mobile'=>$_POST['mobile'],
+			'email'=>$_POST['email'],
+			'password'=>$_POST['password'],
+			'pin'=>$_POST['pin'],
+			'resetCode'=>$_POST['resetCode'],
+			// 'areaId'=>$_POST['area'],
+			// 'superAdminId'=>$_POST['createdBy'],
+		);
+
+		$result=$this->Super_model->insertData($tablename='AreaAdmin',$data_array);
+
+		$this->load->view('s_area_admin');
+	}
+
+	public function load($a=''){
+      $this->load->view($a);
+    }
+
+	public function loadSuperAdmin(){
+      $this->load->view('s_super_admin');
+    }
+
+    public function loadAreaAdmin(){
+      $this->load->view('s_area_admin');
+    }
+
+    public function loadHome(){
+      $this->load->view('s_home');
+    }		
 }
