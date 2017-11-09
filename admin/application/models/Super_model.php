@@ -71,15 +71,26 @@ class Super_model extends CI_Model{
         }
     }
 
-    public function deleteData($tblName,$where){
-      return $this->db->delete($tblName,$where);
-    }    
+   public function selectRow($id){
 
-    public function updateData($tablename, $data_arr, $where_arr) {
-        try {
-            $this->db->update($tablename, $data_arr, $where_arr);           
-        } catch (Exception $err) {
-            return $err->getMessage();
-        }
+    $this->db->select()
+    ->from('SuperAdmin')
+    ->where('superAdminId',$id);
+
+    $query = $this->db->get();
+
+    return $query->row(); 
+  }
+
+
+  public function updateData($tablename, $data_arr, $where_arr) {
+        
+    return $this->db->update($tablename, $data_arr, $where_arr);
     }
+
+
+public function deleteData($tblName,$where){
+      return $this->db->delete($tblName,$where);
+}
+
 }

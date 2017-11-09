@@ -8,9 +8,9 @@
 
 		<a href="<?php echo base_url()?>index.php/Super/loadAreaAdmin" target="_self" style="text-decoration: none;"> <li class="nav"> <img src="<?php echo base_url()?>designs/icon/area.png" class="image">Area Admin</li></a>
 
-		<a href="d_home.html" target="_self" style="text-decoration: none;"> <li class="nav"> <img src="<?php echo base_url()?>designs/icon/rates.png" class="image">Rates</li></a>
+		<a href="<?php echo base_url()?>index.php/Super/loadRates" target="_self" style="text-decoration: none;"> <li class="nav"> <img src="<?php echo base_url()?>designs/icon/rates.png" class="image">Rates</li></a>
 
-		<a href="d_home.html" target="_self" style="text-decoration: none;"> <li class="nav"> <img src="<?php echo base_url()?>designs/icon/analytics.png" class="image">Analytics</li></a>
+		<a href="<?php echo base_url()?>index.php/Super/loadMap" target="_self" style="text-decoration: none;"> <li class="nav"> <img src="<?php echo base_url()?>designs/icon/analytics.png" class="image">Analytics</li></a>
 
 		<a href="d_home.html" target="_self" style="text-decoration: none;"> <li class="nav"> <img src="<?php echo base_url()?>designs/icon/notifications.png" class="image">Notifications</li></a>
 

@@ -106,5 +106,72 @@ class Super extends CI_Controller {
 
     public function loadHome(){
       $this->load->view('s_home');
-    }		
+    } 
+
+    public function loadRates(){
+      $this->load->view('s_rates');
+    }
+
+    public function searhUser(){
+
+		$user = $_GET['strUser'];
+
+		//$whr = array('IndexNumber' => $user, );
+
+	    $data['UserDetailsone']=$this->Super_model->selectRow($user);
+
+		echo json_encode(array("data"=>$data));
+
+	}
+
+
+	public function deleteUser(){
+
+
+		$formsubmit = $this->input->post('buttonForm');
+
+		
+
+
+		if($formsubmit=='delete'){
+
+			$whr = array('superAdminId' =>$this->input->post('IndexN') );
+			$this->Super_model->deleteData('superAdmin',$whr);
+
+
+			$data['superAdminData'] = $this->Super_model->getData($tablename='superAdmin'); 
+
+			$this->load->view('s_dashboard',$data);
+
+
+		}
+	
+			
+		if($formsubmit=='update'){
+
+
+				
+		
+
+				$whr = array('superAdminId' => $this->input->post('IndexN') );
+		
+				
+
+				$dataOne = array(
+				'nic' => $this->input->post('FnameOne'),
+				'telephone' => $this->input->post('LnameOne'),
+				
+				
+				);
+				$this->Super_model->updateData('superAdmin',$dataOne, $whr);
+
+				$data['superAdminData'] = $this->Super_model->getData($tablename='superAdmin'); 
+				$this->load->view('s_dashboard',$data);
+				
+		}
+
+
+	
+
+	}	
 }
