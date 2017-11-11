@@ -38,7 +38,9 @@ class Super extends CI_Controller {
             		
 			$this->load->view('s_dashboard',$data);
 		}else{
-			$this->load->view('s_home');
+			$data['coordinateData'] = $this->Super_model->getData($tablename='coordinate');
+
+			$this->load->view('s_dashboard',$data);
 		}
 
 	}

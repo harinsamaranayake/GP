@@ -23,69 +23,82 @@
 		<!-- span 02 -->
 		<span style="width:55%;height:100%;background-color: #ffffff;display:inline-block;float: left;margin: 0px;border: 0px;padding: 0px;">			
 			<div class="topic">
-				<span><u>Super Admin Account</u></span>						
+				<span><u>Rates</u></span>						
 			</div>
 
 			<form method="post" action="customer.php">
 				<table  class="form_table ">
 					<tr class="form_table_row" style="height: 60px;">
-						<td class="form_table_row_description" style="width: 200px;">Phase</td>
+						<td class="form_table_row_description">Phase</td>
 						<td><input type="text" name="nic" placeholder="id" size="10" class="form_table_row_input" disabled></td>
 						<td><input type="text" name="nic" placeholder="phase" size="10" class="form_table_row_input"></td>
 						<td>
-							<button type="submit" name="register" class="button button1" style="margin-left: 10px;padding: 2px 10px;">Add</button>						
-						</td>
+							<button type="submit" name="register" class="button buttonsubmit" style="margin-left: 10px;padding: 2px 10px;">Add</button>
+							<button type="submit" name="register" class="button buttonview" style="margin-left: 10px;padding: 2px 10px;">View</button>						
+						</td>						
 					</tr>
 
 					<tr class="form_table_row" style="height: 60px;">
-						<td class="form_table_row_description" style="width: 200px;">Amphere</td>
+						<td class="form_table_row_description">Amphere</td>
 						<td><input type="text" name="nic" placeholder="id" size="10" class="form_table_row_input" disabled></td>
 						<td><input type="text" name="nic" placeholder="amphere" size="10" class="form_table_row_input"></td>
 						<td>
-							<button type="submit" name="register" class="button button1" style="margin-left: 10px;padding: 2px 10px;">Add</button>						
+							<button type="submit" name="register" class="button buttonsubmit" style="margin-left: 10px;padding: 2px 10px;">Add</button>	
+							<button type="submit" name="register" class="button buttonview" style="margin-left: 10px;padding: 2px 10px;">View</button>					
 						</td>
 					</tr>
 
 					<tr class="form_table_row" style="height: 60px;">
-						<td class="form_table_row_description" style="width: 200px;">Occupant Type</td>
+						<td class="form_table_row_description">Occupant</td>
 						<td><input type="text" name="nic" placeholder="id" size="10" class="form_table_row_input" disabled></td>
 						<td><input type="text" name="nic" placeholder="occupant" size="10" class="form_table_row_input"></td>
 						<td>
-							<button type="submit" name="register" class="button button1" style="margin-left: 10px;padding: 2px 10px;">Add</button>						
+							<button type="submit" name="register" class="button buttonsubmit" style="margin-left: 10px;padding: 2px 10px;">Add</button>	
+							<button type="submit" name="register" class="button buttonview" style="margin-left: 10px;padding: 2px 10px;">View</button>					
 						</td>
 					</tr>
 
 					<tr class="form_table_row" style="height: 60px;">
-						<td class="form_table_row_description" style="width: 200px;">Connection Type</td>
+						<td class="form_table_row_description">Connection</td>
 						<td><input type="text" name="nic" placeholder="id" size="10" class="form_table_row_input" disabled></td>
 						<td><input type="text" name="nic" placeholder="connection" size="10" class="form_table_row_input"></td>
 						<td>
-							<button type="submit" name="register" class="button button1" style="margin-left: 10px;padding: 2px 10px;">Add</button>						
+							<button type="submit" name="register" class="button buttonsubmit" style="margin-left: 10px;padding: 2px 10px;">Add</button>
+							<button type="submit" name="register" class="button buttonview" style="margin-left: 10px;padding: 2px 10px;">View</button>						
 						</td>
 					</tr>				
 
 					<tr class="form_table_row" style="height: 60px;">
-						<td class="form_table_row_description" style="width: 200px;">Area</td>
-						<td><input type="text" name="nic" placeholder="id" size="10" class="form_table_row_input" disabled></td>
+						<td class="form_table_row_description">Area</td>						
 						<td>
-							<select class="form_table_row_select" style="margin-left: 10px;width: 125px;">
+							<select class="form_table_row_dropdown" style="margin-left: 10px;width: 140px;">
 								<option value="" disabled selected hidden>Province</option>
 								<option>Western</option>
 								<option>Sothern</option>
 								<option>Nothern</option>
 							</select>
-						</td>
+						</td>						
+					</tr>
+
+					<tr class="form_table_row" style="height: 60px;">
+						<td></td>											
 						<td>
-							<select class="form_table_row_select" style="margin-left: 10px;width: 125px;">
+							<select class="form_table_row_dropdown" style="margin-left: 10px;width: 140px;">
 								<option value="" disabled selected hidden>District</option>
 								<option>Colombo</option>
 								<option>Gampaha</option>
 								<option>Kaluthara</option>
 							</select>
-						</td>
+						</td>						
+					</tr>
+
+					<tr class="form_table_row" style="height: 60px;">
+						<td></td>
+						<td><input type="text" name="nic" placeholder="id" size="10" class="form_table_row_input" disabled></td>
 						<td><input type="text" name="nic" placeholder="area" size="10" class="form_table_row_input"></td>				
 						<td>
-							<button type="submit" name="register" class="button button1" style="margin-left: 10px;padding: 2px 10px;">Add</button>						
+							<button type="submit" name="register" class="button buttonsubmit" style="margin-left: 10px;padding: 2px 10px;">Add</button>	
+							<button type="submit" name="register" class="button buttonview" style="margin-left: 10px;padding: 2px 10px;">View</button>					
 						</td>
 					</tr>
 				</table>

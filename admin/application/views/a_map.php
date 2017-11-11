@@ -24,20 +24,34 @@
 		<span style="width:55%;height:100%;background-color: #ffffff;display:inline-block;float: left;margin: 0px;border: 0px;padding: 0px;">				
 		    <div id="map" style="height:100%;width:100%;"></div>
 
-		    <script>
+		   <script>
 		      function initMap() {
 		        var a=(6.934351);
 		        var b=(79.842824);
-		        // var i=1;
-		        var uluru = {lat: a, lng: b};
-		        var map = new google.maps.Map(document.getElementById('map'), {zoom: 7,center: uluru});        
+		        
+		        var cent = {lat: a, lng: b};
+		        var map = new google.maps.Map(document.getElementById('map'), {zoom: 7,center: cent});        
 
-		        // while(i<10){
-		          var marker = new google.maps.Marker({position: uluru,map: map});
-		          // a=(-25.363)+1;
-		          // b=(131.044)+1;
-		          // i++;
-		        // }
+		        var c;
+		        var d;
+		        var marker;
+		        
+		        <?php
+					$count =1;
+					foreach ($coordinateData as $row) {
+				?>	
+
+					c=<?php echo $row->xCoordinate;?>;					
+					d=<?php echo $row->yCoordinate;?>;
+					uluru1 = {lat: c, lng: d};
+			        marker = new google.maps.Marker({position: cent,map: map});
+		        	marker = new google.maps.Marker({position: uluru1,map: map});
+		        	
+		        <?php
+		        	$count+=1;
+					} 
+				?>
+		        
 		      }
 		    </script>
 

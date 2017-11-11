@@ -9,40 +9,45 @@
 	<?php include "includes/css.php" ?>	
 	<style>
 		table {
-		    font-family: arial, sans-serif;
+		    font-family: arial;
 		    border-collapse: collapse;
 		    width: 80%;
 		    margin-left: 50px;
-		    margin-top: 20px;
-		    border: 1px solid #CAEAFF;		    
+		    margin-top: 20px;		    
+		    border: 1px solid #000000;		    		
+		    text-decoration: none;
 		}
 
 		th {
-		    border: 1px solid #CAEAFF;
+		    border: 0px solid red;
 		    text-align: left;
 		    padding: 8px;
-		    background-color: #3498DB;
+		    background-color: #404040;
 		    color: #ffffff;
 		}
 
 		td {
-		    border: 1px solid #CAEAFF;
+		    border: 0px solid red;
 		    text-align: left;
-		    padding: 2px;		    
+		    padding: 2px;		    	    
 		}
 
 		tr:nth-child(even){
-			background-color: #EDF7FD;
+			background-color: ;
+		}
+
+		tr:nth-child(odd){
+			background-color: ;
 		}		
 
 		tr:hover{
-			background-color: #A7E9F9;
+			background-color: #ffffff;
+			color: ;
 		}
 	</style>
 
 	<link rel="stylesheet" href="<?php echo base_url()?>designs/modal.css">
-  	<script src="<?php echo base_url()?>designs/jquery.min.js"></script>
-  	<!-- <script src="<?php echo base_url()?>designs/bootstrap.min.js"></script>  -->		
+  	<script src="<?php echo base_url()?>designs/jquery.min.js"></script>  			
 </head>
 
 <body style="margin: 0px;border: 0px;padding:0px;">
@@ -64,43 +69,34 @@
 		<!-- span 03 -->
 		<span style="width:30%;height:100%;background-color: #F0F0F0;display:inline-block;float: left;margin: 0px;border: 0px;padding: 0px;">
 			
-				<div class="header" style="padding: 20px 50px;">
-					<span><u>Customers</u></span>						
+				<div class="topic">
+					<span style="color: #000000"></span>						
 				</div>
 
 				<form method="post" action="customer.php">
 					<table>
 						<tr>
 							<th class="form_table_row_description">ID</th>
-							<th class="form_table_row_description">NIC</th>
-							<th class="form_table_row_description">Telephone</th>
-												
+							<th class="form_table_row_description">Mobile</th>
+							<th class="form_table_row_description">Email</th>												
 						</tr>
 						
-					<?php 
-
+				<?php 
 					$count =1;
-
 					foreach ($superAdminData as $row) {
+				?>				
+					<tr data-id=<?php echo $row->superAdminId;?>>
+						<td class="form_table_row_description"><?php echo $row->superAdminId;?></td>						
+						<td class="form_table_row_description"><?php echo $row->mobile;?></td>
+						<td class="form_table_row_description"><?php echo $row->email;?></td>													
+					</tr>
 
-
-						?>				
-						<tr data-id=<?php echo $row->superAdminId;?>>
-							<td class="form_table_row_description"><?php echo $row->superAdminId;?></td>						
-							<td class="form_table_row_description"><?php echo $row->nic;?></td>
-							<td class="form_table_row_description"><?php echo $row->telephone;?></td>													
-						</tr>
-
-						
-
-
-					<?php
-						$count+=1;
-
-					 } ?>																	
+				<?php
+					$count+=1;
+					} 
+				?>																	
 					</table>
-				</form>
-			
+				</form>			
 		</span>
 
 	</div>
