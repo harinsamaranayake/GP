@@ -98,9 +98,7 @@
 		</span>
 
 		<!-- span 03 -->
-		<span style="width:30%;height:100%;background-color: #F0F0F0;display:inline-block;float: left;margin: 0px;border: 0px;padding: 0px;">
-			
-		</span>
+		<?php include "includes/s_table.php" ?>
 
 	</div>
 	<!-- footer -->

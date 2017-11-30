@@ -1,50 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>	
-	<title>Super Administrator Dashboard</title>
+	<title>SuperController Administrator Dashboard</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- css files -->
 	<?php include "includes/css.php" ?>	
-	<style>
-		table {
-		    font-family: arial;
-		    border-collapse: collapse;
-		    width: 80%;
-		    margin-left: 50px;
-		    margin-top: 20px;		    
-		    border: 1px solid #000000;		    		
-		    text-decoration: none;
-		}
-
-		th {
-		    border: 0px solid red;
-		    text-align: left;
-		    padding: 8px;
-		    background-color: #404040;
-		    color: #ffffff;
-		}
-
-		td {
-		    border: 0px solid red;
-		    text-align: left;
-		    padding: 2px;		    	    
-		}
-
-		tr:nth-child(even){
-			background-color: ;
-		}
-
-		tr:nth-child(odd){
-			background-color: ;
-		}		
-
-		tr:hover{
-			background-color: #ffffff;
-			color: ;
-		}
-	</style>
 
 	<link rel="stylesheet" href="<?php echo base_url()?>designs/modal.css">
   	<script src="<?php echo base_url()?>designs/jquery.min.js"></script>  			
@@ -55,7 +17,7 @@
 	<!-- header -->
 	<?php include "includes/s_header.php" ?>
 
-	<!-- footer -->
+	<!-- body -->
 	<div style="height:600px;width:100%;background-color: black;">
 
 		<!-- span 01 -->
@@ -66,43 +28,13 @@
 			
 		</span>
 
-		<!-- span 03 -->
-		<span style="width:30%;height:100%;background-color: #F0F0F0;display:inline-block;float: left;margin: 0px;border: 0px;padding: 0px;">
-			
-				<div class="topic">
-					<span style="color: #000000"></span>						
-				</div>
-
-				<form method="post" action="customer.php">
-					<table>
-						<tr>
-							<th class="form_table_row_description">ID</th>
-							<th class="form_table_row_description">Mobile</th>
-							<th class="form_table_row_description">Email</th>												
-						</tr>
-						
-				<?php 
-					$count =1;
-					foreach ($superAdminData as $row) {
-				?>				
-					<tr data-id=<?php echo $row->superAdminId;?>>
-						<td class="form_table_row_description"><?php echo $row->superAdminId;?></td>						
-						<td class="form_table_row_description"><?php echo $row->mobile;?></td>
-						<td class="form_table_row_description"><?php echo $row->email;?></td>													
-					</tr>
-
-				<?php
-					$count+=1;
-					} 
-				?>																	
-					</table>
-				</form>			
-		</span>
+		<!-- span 03 -->				
+		<?php include "includes/s_table.php" ?>			
 
 	</div>
 
 
-<form method="post" action="<?php echo base_url()?>index.php/Super/deleteUser">
+<form method="post" action="<?php echo base_url()?>index.php/SuperController/deleteUser">
 
 <div id="myModal" class="modal" >
 
@@ -236,7 +168,7 @@ $(document).ready(function() {
 
 		$.ajax({
 	    type: "GET",
-	    url: "http://localhost/Git/GP/admin/index.php/Super/searhUser" ,
+	    url: "http://localhost/Git/GP/admin/index.php/SuperController/searhUser" ,
 	    data: {"strUser": getIdFromRow}, 
 	    dataType:'JSON', 
 	    success: function(response){
